@@ -1,0 +1,107 @@
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	color: #666666;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+}
+ul {
+	list-style-type: none;
+}
+
+#header {
+	border-bottom: 1px solid #E1E1E1;
+}
+#nav-header {
+	float: left;
+	color: #6D6D6D;
+}
+#nav-button {
+	float: left;
+	padding: 13px 17px;
+	border-right: 1px solid #E1E1E1;
+	cursor: pointer;
+}
+#logo {
+	float: left;
+	padding: 9px 10px 8px;
+}
+#top-nav {
+	float: right;
+}
+.top-nav-item {
+	position: relative;
+	float: left;
+	padding: 13px 17px;
+	color: #6D6D6D;
+	border-left: 1px solid #E1E1E1;
+	cursor: pointer;
+}
+.top-nav-item:hover {
+	background-color: #373737;
+}
+.top-nav-item .label {
+	text-shadow: none;
+    padding: 1px 4px;
+    position: absolute;
+    top: 8px; left: 6px;
+    background-color: #F56B6B;
+}
+@media (max-width: 1200px) {
+	.top-nav-item.signout .hidden-below-1200px {
+		display: none;
+	}
+}
+#left-column {
+	width: 150px;
+}
+#menu ul {
+	display: none;
+}
+#menu>li {
+	line-height: 60px;
+	cursor: pointer;
+}
+.parent:after {
+	content: "\f054";
+	float: right;
+	font-family: fontAwesome;
+}
+.parent.open:after {
+	content: "\f078";
+}
+
+/* 清除浮动 */
+.clear:after {
+	content: ".";
+	display: block;
+	height: 0;
+	font-size: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clear {
+	zoom: 1;
+}
+
+.label {
+    display: inline;
+    padding: 0.2em 0.6em 0.3em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25em;
+}
