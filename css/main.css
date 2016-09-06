@@ -19,6 +19,7 @@ ul {
 }
 
 #header {
+	display: static;
 	border-bottom: 1px solid #E1E1E1;
 }
 #nav-header {
@@ -37,6 +38,7 @@ ul {
 }
 #top-nav {
 	float: right;
+	margin: 0;
 }
 .top-nav-item {
 	position: relative;
@@ -62,24 +64,85 @@ ul {
 	}
 }
 #left-column {
-	width: 150px;
+	width: 50px;
+	transition: width .3s;
+}
+#left-column a {
+	display: block;
+	padding: 10px;
+	color: #C4C4C4;
+	text-decoration: none;
+	border-bottom: 1px solid #585858;
+}
+#profile {
+	display: none;
+}
+#menu {
+	background-color: #515151;
+}
+#menu>li {
+	position: relative;
+	cursor: pointer;
+}
+#menu>li>ul {
+	position: absolute;
+	top: 0; left: 50px;
+	width: 210px;
+}
+#menu>li>a {
+	padding-left: 13px;
 }
 #menu ul {
 	display: none;
+	background-color: #515151;
 }
-#menu>li {
-	line-height: 60px;
-	cursor: pointer;
+#menu>li ul a {
+	padding-left: 20px;
 }
-.parent:after {
+#menu li ul a:before {
+	 content: "\f101";
+    font-size: 14px;
+    font-family: FontAwesome;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: margin ease 0.5s;
+}
+#menu li ul a:hover:before {
+    margin-right: 20px;
+}
+#menu>li>a>span {
+	display: none;
+}
+#menu li ul ul a {
+	padding-left: 30px;
+}
+#menu .scroll.parent>a:after {
 	content: "\f054";
 	float: right;
 	font-family: fontAwesome;
 }
-.parent.open:after {
+#menu .scroll.parent.open>a:after {
 	content: "\f078";
 }
-
+#left-column.active{
+	width: 235px;
+}
+#left-column.active #profile {
+	display: block;
+}
+#left-column.active #profile-details {
+	margin-left: 15px;
+}
+#left-column.active #profile>div {
+	float: left;
+}
+#left-column.active #profile-name {
+	margin: 6px 0 0;
+}
+#left-column.active #menu ul{
+	position: static;
+	width: auto;
+}
 /* 清除浮动 */
 .clear:after {
 	content: ".";
@@ -92,7 +155,6 @@ ul {
 .clear {
 	zoom: 1;
 }
-
 .label {
     display: inline;
     padding: 0.2em 0.6em 0.3em;
