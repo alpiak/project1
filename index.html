@@ -4,11 +4,12 @@
 	<head>
 		<title>project1</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/font-awesome.min.css" />
-		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
-		<header id="header" class="clear">
+		<div id="header" class="clear">
 			<div id="nav-header">
 				<a id="nav-button"><i class="icon-indent-right icon-large"></i></a>
 				<a id="logo"><img src="images/logo.png" /></a>
@@ -63,13 +64,13 @@
 					</a>
 				</li>
 			</ul>
-		</header>
+		</div>
 		<nav id="left-column">
-			<div id="profile">
-				<div id="profile-logo"></div>
-				<div>
-					<p id="profile-name">John Doe</p>
-					<p id="profile-title">administrator</p>
+			<div id="profile" class="clear">
+				<div id="profile-logo"><i class="icon-shopping-cart icon-4x"></i></div>
+				<div id="profile-details">
+					<h4 id="profile-name">John Doe</h4>
+					<small id="profile-title">Administrator</small>
 				</div>
 			</div>
 			<ul id="menu">
@@ -79,8 +80,8 @@
 						<span>Dashboard</span>
 					</a>
 				</li>
-				<li id="menu-catalog">
-					<a class="parent">
+				<li id="menu-catalog" class="parent toggle">
+					<a>
 						<i class="icon-tags icon-large"></i>
 						<span>Catalog</span>
 					</a>
@@ -97,22 +98,41 @@
 						<li>
 							<a>Filters</a>
 						</li>
-						<li>
-							<a class="parent">Attributes</a>
+						<li class="parent scroll">
+							<a>Attributes</a>
 							<ul>
-								<li>
-									<a>Attributes</a>
-								</li>
-								<li>
-									<a>Attribute Groups</a>
-								</li>
+								<li><a>Attributes</a></li>
+								<li><a>Attribute Groups</a></li>
 							</ul>
 						</li>
+					</ul>
+				</li>
+				<li id="menu-extension" class="parent toggle">
+					<a>
+						<i class="icon-wrench icon-large"></i>
+						<span>Extensions</span>
+					</a>
+					<ul>
+						<li><a>Extension Installer</a></li>
+						<li><a>Extensions</a></li>
+						<li><a>Modifications</a></li>
+						<li><a>Events</a></li>
+					</ul>
+				</li>
+				<li id="menu-design" class="parent toggle">
+					<a>
+						<i class="icon-laptop icon-large"></i>
+						<span>Design</span>
+					</a>
+					<ul>
+						<li><a>Layouts</a></li>
+						<li><a>Banners</a></li>
 					</ul>
 				</li>
 			</ul>
 		</nav>
 		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.min.js"></script>
+		<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="scripts/main.js"></script>
 	</body>
 </html>
